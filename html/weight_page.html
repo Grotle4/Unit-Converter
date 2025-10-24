@@ -13,6 +13,30 @@
         <li><a href="temperature_page.html">Temperature</a></li>
         <li style="float:right"><a href="#about">About</a></li>
     </ul>
+    <h1>Unit Converter</h1>
+    <div class="unit_selector">
+        <label for="unit_length">Enter the weight to convert</label>
+        <input type="number" min="1" max="999">
+        <label for="unit_from">Unit to convert from</label>
+        <select name="unit_from" id="unit_from">
+            <option value="in">Inches</option>
+            <option value="yrd">Yard</option>
+            <option value="mile">Mile</option>
+            <option value="cm">Centimeters</option>
+            <option value="m">Meter</option>
+            <option value="km">Kilometer</option>
+        </select>
+        <label for="unit_to">Unit to convert to</label>
+        <select name="unit_to" id="unit_to">
+            <option value="in">Inches</option>
+            <option value="yrd">Yard</option>
+            <option value="mile">Mile</option>
+            <option value="cm">Centimeters</option>
+            <option value="m">Meter</option>
+            <option value="km">Kilometer</option>
+        </select>
+        <button>Convert</button>
+    </div>
     
 </body>
 </html>
