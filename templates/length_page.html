@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Length Converter</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <ul>
-        <li><a href="/templates/length_page.html" class="active">Length</a></li>
-        <li><a href="/templates/weight_page.html">Weight</a></li>
-        <li><a href="/templates/temperature_page.html">Temperature</a></li>
+        <li><a href="{{ url_for('length')}}" class="active">Length</a></li>
+        <li><a href="{{ url_for('weight')}}">Weight</a></li>
+        <li><a href="{{ url_for('temperature')}}">Temperature</a></li>
         <li style="float:right"><a href="#about">About</a></li>
     </ul>
     <h1>Unit Converter</h1>
@@ -21,21 +21,23 @@
             <input type="number" min="1" max="999" id="unit" name="unit" required>
             <label for="unit_from">Unit to convert from</label>
             <select name="unit_from" id="unit_from">
-                <option value="in">Inches</option>
-                <option value="yrd">Yard</option>
+                <option value="inch">Inches</option>
+                <option value="foot">Foot</option>
+                <option value="yard">Yard</option>
                 <option value="mile">Mile</option>
-                <option value="cm">Centimeters</option>
-                <option value="m">Meter</option>
-                <option value="km">Kilometer</option>
+                <option value="centimeter">Centimeters</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
             </select>
             <label for="unit_to">Unit to convert to</label>
             <select name="unit_to" id="unit_to">
-                <option value="in">Inches</option>
-                <option value="yrd">Yard</option>
+                <option value="inch">Inches</option>
+                <option value="foot">Foot</option>
+                <option value="yard">Yard</option>
                 <option value="mile">Mile</option>
-                <option value="cm">Centimeters</option>
-                <option value="m">Meter</option>
-                <option value="km">Kilometer</option>
+                <option value="centimeter">Centimeters</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
             </select>
             <input type="submit" value="Convert" style="width: 130px;">
         </div>
