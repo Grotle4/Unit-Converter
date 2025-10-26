@@ -15,5 +15,9 @@
     </ul>
     <h1>Results</h1>
     <h2>Your converted amount is: {{converted}} {{suffix}}</h2>
+    <form action="/return" method="post">
+        <input type="submit" value="Return to Home" style="width: 150px;">
+        <input type="hidden" name="page" value={{page_type}}>
+    </form>
 </body>
 </html>

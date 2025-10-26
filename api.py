@@ -31,9 +31,16 @@ def check_convert():
     page_type = request.form.get("page")
     converted = converter.conversion(unit, unit_from, unit_to, page_type)
     suffix = get_unit_suffix.get_suffix(converted, unit_to, page_type)
-    return render_template("convert_page.html", suffix= suffix, converted= converted)
+    return render_template("convert_page.html", suffix= suffix, converted= converted, page_type= page_type)
 
 
+@app.route("/return", methods=["POST"])
+def go_to_home():
+    page_type = request.form.get("page")
+    print(page_type)
+    print(type(page_type))
+
+    return render_template(f"{page_type}_page.html")
 
 
 if __name__ == "__main__":
