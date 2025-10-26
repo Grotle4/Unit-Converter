@@ -24,7 +24,6 @@ A simple and elegant **Flask-based web application** that allows users to conver
 The **Unit Converter** is a lightweight Flask web app designed for quick and accurate unit conversions.  
 It includes separate pages for **length**, **weight**, and **temperature**, each providing user-friendly interfaces and instant conversion results.
 
-The app is ideal for learning Flask fundamentals, front-end integration, or as a base for more advanced conversion utilities.
 
 ---
 
@@ -41,27 +40,6 @@ The app is ideal for learning Flask fundamentals, front-end integration, or as a
 
 ---
 
-## 🗂️ Project Structure
-
-Unit_Converter/
-├── api.py # Flask app entry point
-├── converter.py # Core conversion logic
-├── get_unit_suffix.py # Handles suffix display for units
-├── static/
-│ └── css/
-│ └── styles.css # Styling for pages
-├── templates/
-│ ├── convert_page.html
-│ ├── length_page.html
-│ ├── temperature_page.html
-│ └── weight_page.html
-└── README.md
-
-yaml
-Copy code
-
----
-
 ## ⚙️ Installation
 
 Follow these steps to set up the project locally.
@@ -69,29 +47,31 @@ Follow these steps to set up the project locally.
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/Grotle4/Unit-Converter>
 cd Unit_Converter
-2. Create and activate a virtual environment
-bash
+
+### 2. Create and activate a virtual environment
+```bash
 Copy code
 python -m venv venv
 # On Windows
 venv\Scripts\activate
 # On macOS/Linux
 source venv/bin/activate
-3. Install dependencies
-bash
+
+### 3. Install dependencies
+```bash
 Copy code
 pip install -r requirements.txt
 (If no requirements.txt exists, you can install Flask manually:)
 
-bash
+````bash
 Copy code
 pip install flask
 🚀 Usage
 Run the app locally:
 
-bash
+```bash
 Copy code
 python api.py
 Then open your browser and go to:
@@ -101,7 +81,7 @@ Copy code
 http://127.0.0.1:5000/
 You’ll see the home page, where you can choose the unit type to convert.
 
-🔧 Configuration
+### 🔧 Configuration
 You can modify or add conversion logic in converter.py.
 To add new conversion categories (like speed or volume):
 
@@ -111,7 +91,7 @@ Add corresponding logic to converter.py.
 
 Update Flask routes in api.py.
 
-🧠 Examples
+### 🧠 Examples
 Example 1 — Length Conversion
 Input: 5 meters → Output: 16.404 feet
 
@@ -121,11 +101,11 @@ Input: 1 kilogram → Output: 2.205 pounds
 Example 3 — Temperature Conversion
 Input: 100°C → Output: 212°F
 
-🛠️ Troubleshooting
+### 🛠️ Troubleshooting
 Problem	Solution
 Flask app won’t start	Ensure Flask is installed (pip install flask).
 CSS not loading	Check the static/css/styles.css file path.
 Changes not showing	Restart Flask after code edits.
 
-👥 Contributors
+### 👥 Contributors
 Your Name — Developer & Maintainer
