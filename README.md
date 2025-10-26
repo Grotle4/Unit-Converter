@@ -119,4 +119,4 @@ CSS not loading	Check the static/css/styles.css file path.
 Changes not showing	Restart Flask after code edits.
 
 ### 👥 Contributors
-Your Name — Developer & Maintainer
+Dylan Troche — Developer & Maintainer
