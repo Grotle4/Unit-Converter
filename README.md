@@ -46,41 +46,47 @@ Follow these steps to set up the project locally.
 
 ### 1. Clone the repository
 
-```bash
+```
+bash
 git clone <https://github.com/Grotle4/Unit-Converter>
 cd Unit_Converter
 ```
 
 ### 2. Create and activate a virtual environment
-```bash
-Copy code
+```
+bash
 python -m venv venv
 ```
 # On Windows
+```
+bash
 venv\Scripts\activate
+```
 # On macOS/Linux
+```
+bash
 source venv/bin/activate
+```
 
 ### 3. Install dependencies
-```bash
-Copy code
+```
+bash
 pip install -r requirements.txt
 (If no requirements.txt exists, you can install Flask manually:)
 ```
 
-```bash
-Copy code
-pip install flask
-🚀 Usage
 ```
+bash
+pip install flask
+```
+
+🚀 Usage
 Run the app locally:
 ```bash
-Copy code
 python api.py
 ```
 Then open your browser and go to:
 ```
-Copy code
 http://127.0.0.1:5000/
 ```
 
