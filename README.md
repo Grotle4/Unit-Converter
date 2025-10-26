@@ -49,11 +49,13 @@ Follow these steps to set up the project locally.
 ```bash
 git clone <https://github.com/Grotle4/Unit-Converter>
 cd Unit_Converter
+```
 
 ### 2. Create and activate a virtual environment
 ```bash
 Copy code
 python -m venv venv
+```
 # On Windows
 venv\Scripts\activate
 # On macOS/Linux
@@ -64,21 +66,24 @@ source venv/bin/activate
 Copy code
 pip install -r requirements.txt
 (If no requirements.txt exists, you can install Flask manually:)
-
-````bash
-Copy code
-pip install flask
-🚀 Usage
-Run the app locally:
+```
 
 ```bash
 Copy code
+pip install flask
+🚀 Usage
+```
+Run the app locally:
+```bash
+Copy code
 python api.py
+```
 Then open your browser and go to:
-
-cpp
+```
 Copy code
 http://127.0.0.1:5000/
+```
+
 You’ll see the home page, where you can choose the unit type to convert.
 
 ### 🔧 Configuration
