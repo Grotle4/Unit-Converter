@@ -21,7 +21,7 @@ def temperature():
     return render_template("temperature_page.html")
 
 
-@app.route("/convert", methods=["POST", "GET"]) #TODO: Change to POST in HTML and get values from input name attributes, also work on converter script
+@app.route("/convert", methods=["POST", "GET"])
 def check_convert():
     unit = request.form.get("unit")
     unit_from = request.form.get("unit_from")
