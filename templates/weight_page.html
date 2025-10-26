@@ -11,31 +11,33 @@
         <li><a href="{{ url_for('length')}}" class="active">Length</a></li>
         <li><a href="{{ url_for('weight')}}">Weight</a></li>
         <li><a href="{{ url_for('temperature')}}">Temperature</a></li>
-        <li style="float:right"><a href="#about">About</a></li>
     </ul>
-    <h1>Unit Converter</h1>
-    <div class="unit_selector">
-        <label for="unit_length">Enter the weight to convert</label>
-        <input type="number" min="1" max="999">
-        <label for="unit_from">Unit to convert from</label>
-        <select name="unit_from" id="unit_from">
-            <option value="milligram">Milligram</option>
-            <option value="gram">Gram</option>
-            <option value="kilogram">Kilogram</option>
-            <option value="ounce">Ounce</option>
-            <option value="pound">Pound</option>
+    <h1>Weight Unit Converter</h1>
+    <form action="/convert" method="post">
+        <div class="unit_selector">
+            <input type= "hidden" name="page" value="weight">
+            <label for="unit_length">Enter the weight to convert</label>
+            <input type="number" min="1" max="999" id="unit" name="unit" required>
+            <label for="unit_from">Unit to convert from</label>
+            <select name="unit_from" id="unit_from">
+                <option value="milligram">Milligram</option>
+                <option value="gram">Gram</option>
+                <option value="kilogram">Kilogram</option>
+                <option value="ounce">Ounce</option>
+                <option value="pound">Pound</option>
 
-        </select>
-        <label for="unit_to">Unit to convert to</label>
-        <select name="unit_to" id="unit_to">
-            <option value="milligram">Milligram</option>
-            <option value="gram">Gram</option>
-            <option value="kilogram">Kilogram</option>
-            <option value="ounce">Ounce</option>
-            <option value="pound">Pound</option>
-        </select>
-        <button>Convert</button>
-    </div>
+            </select>
+            <label for="unit_to">Unit to convert to</label>
+            <select name="unit_to" id="unit_to">
+                <option value="milligram">Milligram</option>
+                <option value="gram">Gram</option>
+                <option value="kilogram">Kilogram</option>
+                <option value="ounce">Ounce</option>
+                <option value="pound">Pound</option>
+            </select>
+            <input type="submit" value="Convert" style="width: 130px;">
+        </div>
+    </form>
     
 </body>
 </html>

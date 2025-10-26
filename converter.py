@@ -39,11 +39,11 @@ def calc_weight(unit, unit_from, unit_to):
 
 def calc_temp(unit, unit_from, unit_to):
     if unit_from == "celsius":
-        celsius = unit
+        celsius = int(unit)
     elif unit_from == "fahrenheit":
-        celsius = (unit - 32) * 5/9
+        celsius = (int(unit) - 32) * 5/9
     elif unit_from == "kelvin":
-        celsius = unit - 273.15
+        celsius = int(unit) - 273.15
 
     # Step 2: Convert from Celsius → target
     if unit_to == "celsius":
@@ -63,6 +63,8 @@ def conversion(unit, unit_from, unit_to, type):
             converted = calc_length(unit, unit_from, unit_to)
             return converted
         case "weight":
-            pass #weight calculation goes here
+            converted = calc_weight(unit, unit_from, unit_to)
+            return converted
         case "temperature":
-            pass #temperature calculation
+            converted = calc_temp(unit, unit_from, unit_to)
+            return converted

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import converter
+import get_unit_suffix
 
 app = Flask(__name__)
 
@@ -29,7 +30,8 @@ def check_convert():
     unit_to = request.form.get("unit_to")
     page_type = request.form.get("page")
     converted = converter.conversion(unit, unit_from, unit_to, page_type)
-    return render_template("convert_page.html", unit = unit, unit_from = unit_from, unit_to = unit_to, page = page_type, converted= converted)
+    suffix = get_unit_suffix.get_suffix(converted, unit_to, page_type)
+    return render_template("convert_page.html", suffix= suffix, converted= converted)
 
 
 

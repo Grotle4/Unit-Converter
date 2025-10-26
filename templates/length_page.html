@@ -11,9 +11,8 @@
         <li><a href="{{ url_for('length')}}" class="active">Length</a></li>
         <li><a href="{{ url_for('weight')}}">Weight</a></li>
         <li><a href="{{ url_for('temperature')}}">Temperature</a></li>
-        <li style="float:right"><a href="#about">About</a></li>
     </ul>
-    <h1>Unit Converter</h1>
+    <h1>Length Unit Converter</h1>
     <form action="/convert" method="post">
         <div class="unit_selector">
             <input type= "hidden" name="page" value="length">
